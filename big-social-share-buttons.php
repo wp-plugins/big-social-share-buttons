@@ -2,7 +2,7 @@
 /*
 Plugin Name: Big Social Share Buttons
 Plugin URI:
-Version: 1.00
+Version: 1.01
 Author: <a href="http://www.seo101.net">Seo101</a>
 Description: Adds 3 cool big social share buttons to your posts and pages (Facebook, Twitter & Google)
 License: GPLv2 a
@@ -21,8 +21,14 @@ if (!class_exists("BigSocialShareButtons")) {
 		function addContent($content = '') {
  	 	  global $wp_query;
 	 	  global $post;
+			$excludelist = ',' . str_replace(' ', '',get_option('bssb_global_excludelist')) . ',';
+			$postid = ',' . $post->ID . ',';
+			$excludepost = 'false';
+			if (strpos($excludelist,$postid) !== false) {
+				$excludepost = 'true';
+			}
 
-		  if (is_singular()) {
+		  if (is_singular() && $excludepost=='false' ) {
 			global $url;
 			if (!$url)
 				$url = get_permalink($post->ID);
@@ -155,6 +161,7 @@ register_deactivation_hook( __FILE__, 'big_social_share_buttons_remove' );
 function big_social_share_buttons_install() {
 /* Creates new database field */
 add_option("bssb_locations", 'both', '', 'yes');
+add_option("bssb_global_excludelist", '', '', 'yes');
 }
 
 function big_social_share_buttons_remove() {
@@ -180,7 +187,6 @@ function big_social_share_buttons_page() {
 <div>
 <h2>Big Social Share Buttons - Settings</h2>
 <BR><BR>
-No settings yet
 <form method="post" action="options.php">
 <?php wp_nonce_field('update-options'); ?>
 
@@ -195,10 +201,17 @@ No settings yet
 </select>
 </td>
 </tr>
+<tr>
+<th width="250" scope="row">ID's of posts and pages where NO share buttons should appear: (seperate with a comma ',')</th>
+	<td width="600px">
+			<input name="bssb_global_excludelist" id="bssb_global_excludelist" type="text" style="width:300px" value="<?php echo str_replace(' ', '',get_option('bssb_global_excludelist')); ?>" />
+	</td>
+</tr>
+
 </table>
 
 <input type="hidden" name="action" value="update" />
-<input type="hidden" name="page_options" value="bssb_locations" />
+<input type="hidden" name="page_options" value="bssb_locations, bssb_global_excludelist" />
 
 <p>
 <input type="submit" value="<?php _e('Save Changes') ?>" />

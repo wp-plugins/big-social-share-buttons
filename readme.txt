@@ -4,7 +4,7 @@ Donate link:
 Tags: Big Buttons, Share Buttons, Social Media, Social Sharing, Facebook, Facebook Like, Google Plus, Twitter
 Requires at least: 3.1
 Tested up to: 3.9.1
-Stable tag: 1.00
+Stable tag: 1.01
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ You can set whether they are displayed on top, bottom or both.
 
 Plugin page: <a href="http://www.seo101.net/big-social-share-buttons-wordpress-plugin/">http://www.seo101.net/big-social-share-buttons-wordpress-plugin/</a> (You'll also see the plugin used on this site)
 
-Features: Share Buttons, Google Plus Share Button, Twitter Tweet Button, Facebook Share Button, Simple Share Buttons Adder, Share This, Big Social Buttons, Big Facebook Button, Large Share Buttons, Social Media, ShareThis
+Features: Share Buttons, Google Plus Share Button, Twitter Tweet Button, Facebook Share Button, Simple Share Buttons Adder, Share This, Addthis, Big Social Buttons, Big Facebook Button, Large Share Buttons, Social Media, ShareThis
 
 == Installation ==
 
@@ -38,6 +38,7 @@ None yet
 4. 
 
 == Changelog ==
+1.01 <BR>Option to exclude buttons by on posts and pages (by ID)<BR>
 1.00 <BR>First Release<BR>
 
 

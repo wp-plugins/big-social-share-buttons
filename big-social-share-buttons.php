@@ -2,7 +2,7 @@
 /*
 Plugin Name: Big Social Share Buttons
 Plugin URI:
-Version: 1.01
+Version: 1.02
 Author: <a href="http://www.seo101.net">Seo101</a>
 Description: Adds 3 cool big social share buttons to your posts and pages (Facebook, Twitter & Google)
 License: GPLv2 a
@@ -169,6 +169,18 @@ function big_social_share_buttons_remove() {
 }
 
 
+// Add settings link on plugin page
+function big_social_share_buttons_settings_link($links) {
+  $settings_link = '<a href="options-general.php?page=big-social-share-buttons.php">Settings</a>';
+  array_unshift($links, $settings_link);
+  return $links;
+}
+
+$plugin = plugin_basename(__FILE__);
+add_filter("plugin_action_links_$plugin", 'big_social_share_buttons_settings_link' );
+
+
+
 if ( is_admin() ){
 
 /* Call the html code */
@@ -187,6 +199,10 @@ function big_social_share_buttons_page() {
 <div>
 <h2>Big Social Share Buttons - Settings</h2>
 <BR><BR>
+<p>
+<strong><font size=4 color="#DF0101">10 times more Google Adsense revenue?: </font></strong><a href="http://www.seo101.net/go/ctrthemebssb/" target="_top">Try CTRtheme</a>, the best selling Wordpress Adsense theme.
+</p>
+<BR>
 <form method="post" action="options.php">
 <?php wp_nonce_field('update-options'); ?>
 

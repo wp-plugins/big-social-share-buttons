@@ -4,7 +4,7 @@ Donate link:
 Tags: Big Buttons, Share Buttons, Social Media, Social Sharing, Facebook, Facebook Like, Google Plus, Twitter
 Requires at least: 3.1
 Tested up to: 3.9.1
-Stable tag: 1.01
+Stable tag: 1.02
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,7 @@ None yet
 4. 
 
 == Changelog ==
+1.02 <BR>Updated settings<BR>
 1.01 <BR>Option to exclude buttons by on posts and pages (by ID)<BR>
 1.00 <BR>First Release<BR>
 

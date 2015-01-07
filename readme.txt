@@ -16,7 +16,7 @@ Adds 3 cool big social share buttons to your posts and pages (FACEBOOK, Twitter 
 
 You can set whether they are displayed on top, bottom or both.
 
-Plugin page: <a href="http://www.seo101.net/wordpress-plugins/big-social-share-buttons-wordpress-plugin/">http://www.seo101.net/wordpress-plugins/big-social-share-buttons-wordpress-plugin/</a> (You'll also see the plugin used on this site)
+Plugin page: <a href="http://www.seo101.net/big-social-share-buttons-wordpress-plugin/">http://www.seo101.net/big-social-share-buttons-wordpress-plugin/</a> (You'll also see the plugin used on this site)
 
 Features: Share Buttons, Google Plus Share Button, Twitter Tweet Button, Facebook Share Button, Simple Share Buttons Adder, Share This, Addthis, FACEBOOK Share, Big Social Buttons, Big Facebook Button, Large Share Buttons, Social Media, ShareThis, FACEBOOK, FACEBOOK LIKE
 
